@@ -6,12 +6,13 @@ const Todo = (props: TodoProps) => {
   return (
     <li>
       <label
+        data-test="item-label"
         onClick={handleToggle}
         style={{ textDecoration: completed ? 'line-through' : 'none' }}
       >
         {text}
       </label>
-      <button onClick={handleDelete}>削除</button>
+      <button data-test="delete-button" onClick={handleDelete}>削除</button>
     </li>
   );
 };
